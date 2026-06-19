@@ -89,3 +89,10 @@ Awaiting Dean's decision. Both support number porting from Freshcaller.
 4. Dean decides on telephony (Aircall or Twilio)
 5. Demo to Dean — show Jarvis and Twenty working together
 6. Dean approves automation rules — 49 rules graduate from test to live
+
+## 19 June 2026 — Demo Confirmed Live
+**Phase:** Perception sprint complete. Ready for Dean demo.
+**What shipped:** Commit `8cf00fc` — dashboard, lead record page, pipeline board. Deployed to Vercel. Confirmed live 19 June 2026 (had been live since ~13 June — was incorrectly tracked as outstanding).
+**Blockers resolved:** Perception sprint deployment — demo unblocked.
+**Current blockers:** Dean: Hetzner server account setup (instructions sent). Patrick: Twenty CRM assessment response outstanding. Dean: Freshcaller annual renewal decision (do not renew — act before 4 July). 49/62 automation rules in test_run awaiting Dean/Jack approval (not urgent — demo first).
+**Next action:** Send Dean the proposal + Hetzner instructions + Twilio migration decision email. Demo the live Jarvis system. Await Hetzner credentials to begin Twenty CRM install.
