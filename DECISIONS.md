@@ -130,3 +130,31 @@ This log excludes internal AI development-tooling configuration (agent model sel
 **Date:** 11 April 2026
 **Decision:** All Google Cloud resources (API credentials, sign-in configuration) for Jarvis are managed under one designated Google account, not spread across personal or ad-hoc accounts.
 **Why:** Keeps billing, credentials, and account ownership in one auditable place, removing the risk of access being lost if a personal account becomes inaccessible.
+
+---
+
+### Twenty CRM Selected as CRM Layer Alongside Jarvis
+**Date:** 19 June 2026
+**Decision:** Twenty (open-source CRM) selected to run alongside Jarvis as the system of record for contacts, pipeline, and communication history. Self-hosted on a Hetzner CX22 server owned by Atlantic Renewables.
+**Why:** No per-seat pricing (unlimited users at a flat server cost of ~£4.60/month vs £175+/month for equivalent SaaS). AR owns the data — no vendor lock-in, no subscription that can be changed or cancelled by a third party. Open-source means any developer can work with it in future, not just a specific individual.
+
+---
+
+### Twenty Integration — MCP and API Only, No Direct Database Access
+**Date:** 19 June 2026
+**Decision:** All integration between Jarvis and Twenty routes through Twenty's native MCP server, REST/GraphQL API, and webhooks. Direct database access is not used, even though it is technically possible on a self-hosted deployment.
+**Why:** Direct database writes bypass all of Twenty's application logic — no workflow triggers fire, no webhooks send, no permissions are enforced, and no audit trail is created. The MCP/API path is the only route that keeps governance, logging, and trigger visibility intact.
+
+---
+
+### Single Opportunities Object for the Full Lead-to-Project Lifecycle
+**Date:** 19 June 2026
+**Decision:** The entire customer journey — from first enquiry through to completed project — is carried on a single Opportunities record in Twenty, with the Stage field driving automation at each transition. No separate Lead object, no forced conversion step creating a new record.
+**Why:** Twenty does not have a separate Lead object by design — this is the recommended default path. It matches the existing Jarvis model (one record per person, status changes drive automation). Avoids the data duplication and sync complexity that arises when lead and project are separate records.
+
+---
+
+### Telephony — Freshcaller Replacement Under Evaluation
+**Date:** 19 June 2026
+**Decision:** Freshcaller (Freshdesk PRO, 5 seats, £175/month) will be replaced. Two options evaluated: Aircall (£150/month, standalone) and Twilio via Jarvis (£24-44/month, fully integrated). Decision pending Dean's approval.
+**Why the change is happening:** Freshcaller is embedded in FreshSales. Moving away from FreshSales means moving away from Freshcaller. Both replacement options support number porting — the existing Manchester numbers are preserved. The Twilio option is significantly cheaper and integrates calls directly into the CRM record, but requires a short build sprint. Aircall requires no build work but remains a standalone subscription.
