@@ -78,3 +78,30 @@ This log excludes internal software development tooling questions — it covers 
 ### ✅ Are the Rebuilt Email Templates Real Content or Placeholder?
 **Resolved:** 16 May 2026
 **Answer:** Mixed by design. Three templates (commercial solar, roofing, battery) use real content from actual past company emails. Ten templates use placeholder content pending staff review before go-live.
+
+---
+
+### What Telephony System Replaces Freshcaller?
+**Raised:** 18 June 2026
+**Context:** Freshcaller is embedded in FreshSales. Moving away from FreshSales means losing Freshcaller. Jack confirmed hundreds of calls daily — this is a hard dependency, not optional. Dean confirmed: inbound calls critical, number can be ported.
+**Freshcaller current cost:** PRO plan, 5 seats, £175/month (monthly billing). Includes 3,000 free inbound minutes/month.
+**Options:** Aircall (£150/month, standalone, no build) or Twilio via Jarvis (£24-44/month, integrated, short build sprint).
+**Status:** Awaiting Dean's decision. Cost comparison sent.
+
+---
+
+### Dean to Approve: Hetzner Account Setup for Twenty CRM
+**Raised:** 19 June 2026
+**Context:** Twenty CRM will be self-hosted on a Hetzner CX22 server. Dean needs to create the hosting account in Atlantic Renewables' name.
+**Action required:** Go to hetzner.com/cloud, create account, select CX22 server (5.49 EUR/month). Takes approximately 10 minutes.
+**Status:** Awaiting Dean's action.
+
+---
+
+## Closed Since Last Update
+
+### ✅ What Does FreshSales Template Library Contain? — Resolved 18 June 2026
+**Answer (Jack, via screenshots):** Approximately 85 templates across 10+ product lines. Cannot be exported from FreshSales. Jack confirmed old templates are not wanted in the new system — many need updating. Key sequences identified: EARN Scheme (862 manual sends), scaffolding workflow (5 templates, 97% reply rate). Full inventory extracted and catalogued.
+
+### ✅ What Does Dean Use Freshcaller For? — Resolved 18-19 June 2026
+**Answer (Dean + screenshots):** Two Manchester numbers in active use. Approximately 600 calls/month (June 2026), peaking Wednesday-Thursday 10am-12pm at 150+ calls/hour. Average call duration 2 min 39 sec. Features in use: call transfer, call recording, IVR, business hours routing. PRO plan, 5 seats, £175/month. Both numbers can be ported.
